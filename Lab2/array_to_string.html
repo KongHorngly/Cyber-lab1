@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array to String Loop</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .output { font-weight: bold; color: #2c3e50; background: #ecf0f1; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <h2>Array Join Result</h2>
+    <button onclick="Myfunction()">Enter the color</button>
+    
+    <p>The colors are:</p>
+    <div id="display"></div>
+    <script>
+    function Myfunction() {
+        let n = prompt("How many colors do you want?");
+        let myColor = [];
+        for(let j = 0; j < n; j++) {
+            myColor[j] = prompt("Enter color " + (j + 1));
+            style = "color: " + myColor[j];
+        }
+        let result = myColor.join(",");
+        document.getElementById("display").innerText = result;
+    }
+
+    </script>
+
+</body>
+</html>
