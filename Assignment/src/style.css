@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Soft Glassmorphism for the search bar */
+  .search-glass {
+    @apply bg-white/40 backdrop-blur-md border border-white/20 shadow-inner;
+  }
+
+  /* Custom Floating Animation for the food assets */
+  .float-animation {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Responsive Text scaling */
+  .hero-title {
+    @apply text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tighter;
+  }
+}

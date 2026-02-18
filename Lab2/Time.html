@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Display</title>
+</head>
+<body>
+
+<h1 id="demo"></h1>
+
+<script> 
+   const myInterval = setInterval(function() {
+    const now = new Date();
+    let greeting = '<span style="font-family: sans-serif;">';   
+    const hours = now.getHours();
+    const timeString = now.toLocaleTimeString()
+    if (hours < 12) {
+        greeting = 'Good Morning !';
+    } else if (hours < 14) {
+        greeting = 'Good Afternoon !';
+    } else if (hours < 19) {
+        greeting = 'Good Evening !';
+    } else {
+        greeting = 'Good Night !';
+    }
+    document.getElementById('demo').innerHTML = greeting + '<br> Current time: ' + timeString;
+}, 1000);
+
+</script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,157 @@
+body{
+    background-color: cornflowerblue;
+    display: flex;
+}
+#Title{
+    font-family: 'Times New Roman', Times, serif;
+    font-style:unset;
+    font-weight: bold;
+    background-color:darksalmon;
+    width: 350px;
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 10px;
+    outline: 10px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+#form{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: wavy;
+    background-color: aliceblue;
+    box-shadow: 50px;
+    box-sizing: 50px;
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+    
+}
+
+#fname {
+  padding: 12px;
+  font-size: 14px;
+  width: 250px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  
+}
+#lname {
+  padding: 12px;
+  font-size: 14px;
+  width: 250px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+
+  transition: 0.3s;
+}
+#email{
+  padding: 12px;
+  font-size: 14px;
+  width: 250px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+
+  transition: 0.3s;
+}
+#username{
+  padding: 12px;
+  font-size: 14px;
+  width: 250px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+
+  transition: 0.3s;
+}
+#password{
+  padding: 12px;
+  font-size: 14px;
+  width: 250px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+
+  transition: 0.3s;
+}
+#date{
+  padding: 12px;
+  font-size: 14px;
+  width: 250px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+
+  transition: 0.3s;
+}
+#gender{
+  padding: 8px;
+  font-size: 12px;
+  width: 100px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: black;
+
+  transition: 0.3s;
+}
+#course{
+
+  padding: 8px;
+  font-size: 14px;
+  width: 200px;
+
+  border: 1px solid #410a0a;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  justify-content: space-between;
+}
+#h{
+    font-weight: bold;
+}
+#province{
+  padding: 8px;
+  font-size: 12px;
+  width: 130px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: black;
+
+  transition: 0.3s;
+}
+#Submit{
+    background-color:rgb(232, 134, 16);
+    font-size:medium;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    border: 1px solid green;
+    border-radius: 6px;
+    padding: 7px;
+    justify-content: space-between;
+}
+#phone{
+    padding: 12px;
+  font-size: 14px;
+  width: 250px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+
+  transition: 0.3s;
+}

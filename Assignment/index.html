@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Delivery</title>
+
+    <!-- Tailwind CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your custom CSS (optional) -->
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body>
+    <!-- Background wrapper -->
+    <div
+      class="min-h-screen text-[#2D2D2D] font-sans bg-cover bg-center"
+      style="
+        background-color: #fdf6ec;
+        background-image: url(&quot;./src/bg.png&quot;);
+      "
+    >
+      <!-- Header -->
+      <header
+        class="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2 text-2xl font-bold">
+          <span class="text-3xl">👨‍🍳</span> Foo
+        </div>
+
+        <nav
+          class="hidden md:flex items-center gap-10 font-medium text-gray-600"
+        >
+          <a href="#" class="hover:text-orange-600 transition">Home</a>
+          <a href="#" class="hover:text-orange-600 transition">Menu</a>
+          <a href="#" class="hover:text-orange-600 transition">Contact</a>
+          <a href="#" class="hover:text-orange-600 transition">Shop</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <div class="relative hidden sm:block">
+            <input
+              type="text"
+              placeholder="Search"
+              class="bg-white/60 py-2 pl-10 pr-4 rounded-full shadow-inner outline-none focus:ring-1 ring-orange-300"
+            />
+            <span class="absolute left-4 top-2.5 text-gray-400">🔍</span>
+          </div>
+
+          <button class="relative p-2 bg-white rounded-full shadow-sm">
+            🛒
+            <span
+              class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center"
+              >2</span
+            >
+          </button>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12 py-10"
+      >
+        <!-- Text section -->
+        <section class="order-2 lg:order-1">
+          <h1 class="text-6xl md:text-8xl font-black leading-tight">
+            <span class="text-[#FF7A00]">Fast</span>
+            <span class="text-[#2D2D2D]">Food</span><br />
+            Delivery
+          </h1>
+
+          <p class="mt-6 text-gray-500 text-lg max-w-md leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+            quibusdam fuga nesciunt quidem reiciendis quasi natus
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-6">
+            <!-- FIXED BUTTON -->
+            <button
+              class="bg-black text-white px-10 py-4 rounded-full font-bold shadow-2xl hover:bg-black transition-all transform hover:scale-105"
+            >
+              Order Now
+            </button>
+
+            <button class="flex items-center gap-3 font-bold group">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg group-hover:bg-gray-50 transition"
+              >
+                ▶
+              </div>
+              Watch Video
+            </button>
+          </div>
+
+          <div class="mt-12">
+            <div class="flex text-yellow-400 text-xl tracking-tighter">
+              ★★★★★
+            </div>
+            <p class="font-bold mt-1">5 star rating</p>
+            <p class="text-gray-400 text-sm">based on 1788 reviews</p>
+          </div>
+        </section>
+
+        <!-- Image section -->
+        <section class="order-1 lg:order-2 flex justify-center">
+          <div class="relative w-full max-w-lg">
+            <img
+              src="./src/image.png"
+              alt="Food bag with flying snacks"
+              class="w-full drop-shadow-2xl"
+            />
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

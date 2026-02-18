@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    
+</head>
+<body>
+<!-- Find Leap Year -->
+<h1>Find The leap year</h1>
+
+<button onclick="myFunction()">Check it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let Year = prompt("Please enter The Year:", "1960");
+  if (Year%4 == 0) {
+    text = Year + " Is leap year"
+  } else {
+    text =  Year + " Not Leap year";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+
+<!-- Text to Array -->
+<h1>Array Join Result</h1>
+    <button onclick="Myfunction()">Enter the color</button>
+    
+    <h3 >The colors are: </h3>
+    <div id="display"></div>
+<script>
+    function Myfunction() {
+        let n = prompt("How many colors do you want?");
+        let myColor = [];
+        for(let j = 0; j < n; j++) {
+            myColor[j] = prompt("Enter color " + (j + 1));
+            style = "color: " + myColor[j];
+        }
+        let result = myColor.join(",");
+        document.getElementById("display").innerText = result;
+    }
+
+</script>
+
+<!-- Time Display -->
+
+<h1 id="time"></h1>
+
+<script> 
+   const myInterval = setInterval(function() {
+    const now = new Date();
+    let greeting = '<span style="font-family: sans-serif;">';   
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const timeString = now.toLocaleTimeString()
+    if (hours < 12 && minutes < 60) {
+        greeting = 'Good Morning !';
+    } else if (hours < 14 && minutes < 60) {
+        greeting = 'Good Afternoon !';
+    } else if (hours < 19 && minutes < 60) {
+        greeting = 'Good Evening !';
+    } else {
+        greeting = 'Good Night !';
+    }
+    document.getElementById('time').innerHTML = greeting + '<br> Current time: ' + timeString;
+}, 1000);
+
+</script>
+
+<!-- Ceasar Cipher -->
+
+<div class="cipher-container">
+    <h1>Caesar Cipher</h1>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'encrypt-section')">Encrypt</button>
+        <button class="tab-btn" onclick="openTab(event, 'decrypt-section')">Decrypt</button>
+    </div>
+
+    <div id="encrypt-section" class="tab-content active">
+        <div class="input-group">
+            <label>Plain Text:</label>
+            <input type="text" id="plainInput">
+        </div>
+        <div class="input-group">
+            <label>Shift:</label>
+            <input type="number" id="encryptShift" value="3">
+        </div>
+        <div class="input-group">
+            <label>Cipher text:</label>
+            <div class="result-box encrypt-box" id="encryptResult">...</div>
+        </div>
+        <button class="btn btn-encrypt" onclick="handleCipher(true)">Encrypt</button>
+    </div>
+
+    <div id="decrypt-section" class="tab-content">
+        <div class="input-group">
+            <label>Cipher Text:</label>
+            <input type="text" id="cipherInput">
+        </div>
+        <div class="input-group">
+            <label>Shift:</label>
+            <input type="number" id="decryptShift" value="3">
+        </div>
+        <div class="input-group">
+            <label>Plain text:</label>
+            <div class="result-box decrypt-box" id="decryptResult">...</div>
+        </div>
+        <button class="btn btn-decrypt" onclick="handleCipher(false)">Decrypt</button>
+    </div>
+</div>
+<style>
+    body { font-family: sans-serif; padding: 20px; color: #333; }
+    .cipher-container { max-width: 600px; margin: 40px auto; }
+    
+    /* Tabs */
+    .tabs { border-bottom: 1px solid #ddd; margin-bottom: 20px; }
+    .tab-btn {
+        background: none; border: none; padding: 10px 20px;
+        cursor: pointer; color: #4285f4; font-size: 16px;
+    }
+    .tab-btn.active {
+        border: 1px solid #ddd; border-bottom: 2px solid white;
+        margin-bottom: -1px; border-radius: 4px 4px 0 0; color: #555;
+    }
+
+    /* Form Layout */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .input-group { display: flex; align-items: center; margin-bottom: 15px; }
+    .input-group label { width: 120px; font-size: 14px; }
+    input {
+        flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;
+    }
+
+    /* Result Boxes */
+    .result-box {
+        flex: 1; padding: 15px; border-radius: 4px; min-height: 40px;
+        font-family: monospace; word-break: break-all;
+    }
+    .encrypt-box { background-color: #fce4ec; color: #d81b60; }
+    .decrypt-box { background-color: #e3f2fd; color: #1976d2; }
+
+    /* Buttons */
+    .btn {
+        display: block; margin: 20px auto; padding: 10px 25px;
+        border: none; border-radius: 4px; color: white; cursor: pointer;
+    }
+    .btn-encrypt { background-color: #e53935; }
+    .btn-decrypt { background-color: #1e88e5; }
+</style>
+<script>
+function openTab(evt, sectionName) {
+    let contents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < contents.length; i++) contents[i].classList.remove("active");
+    
+    let buttons = document.getElementsByClassName("tab-btn");
+    for (let i = 0; i < buttons.length; i++) buttons[i].classList.remove("active");
+
+    document.getElementById(sectionName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+
+function handleCipher(isEncrypt) {
+    const text = isEncrypt ? document.getElementById('plainInput').value : document.getElementById('cipherInput').value;
+    let shift = parseInt(isEncrypt ? document.getElementById('encryptShift').value : document.getElementById('decryptShift').value);
+    const resultElement = isEncrypt ? document.getElementById('encryptResult') : document.getElementById('decryptResult');
+
+    if (!isEncrypt) shift = (26 - (shift % 26)) % 26; // Reverse shift for decryption
+
+    const result = text.split('').map(char => {
+        if (char.match(/[a-z]/i)) {
+            const code = char.charCodeAt(0);
+            const base = (code >= 65 && code <= 90) ? 65 : 97;
+            return String.fromCharCode(((code - base + shift) % 26) + base);
+        }
+        return char;
+    }).join('');
+
+    resultElement.innerText = result || "...";
+}
+</script>
+
+
+</body>
+   
+</html>
