@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Address Selector</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="p-10 bg-gray-100">
+
+  <div class="address-card">
+    <h2>Location Selector</h2>
+
+    <div class="form-group">
+      <label>Province</label>
+      <select id="province" class="select select-bordered w-full">
+        <option disabled selected>Select Province</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>District</label>
+      <select id="district" class="select select-bordered w-full" disabled>
+        <option disabled selected>Select District</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Commune</label>
+      <select id="commune" class="select select-bordered w-full" disabled>
+        <option disabled selected>Select Commune</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Village</label>
+      <select id="village" class="select select-bordered w-full" disabled>
+        <option disabled selected>Select Village</option>
+      </select>
+    </div>
+
+    <form id="locationForm">
+      <div class="form-actions">
+        <button class="btn-reset" type="reset">Reset</button>
+        <button class="btn-submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- 🔗 CONNECT JS HERE -->
+  <script src="script.js"></script>
+</body>
+</html>

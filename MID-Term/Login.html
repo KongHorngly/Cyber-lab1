@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS - Anonymous User Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to the Login Page</h2>
+            <div class="form-section">
+                <h3>Submit Your Information</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">ID: </label>
+                        <input type="number" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select a category </option>
+                            <option value="support">Admin</option>
+                            <option value="feedback">Nurse</option>
+                            <option value="complaint">Patient</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Submit</button>
+                    <button type="reset" class="btn-reset">Clear</button>
+                </form>
+            </div>
+            
+           
+        </div>
+    </div>
+</body>
+</html>
