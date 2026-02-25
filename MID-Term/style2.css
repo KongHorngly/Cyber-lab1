@@ -1,0 +1,93 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: whitesmoke;
+    font-size: large;
+    font-weight: bold;
+}
+h1, h2 {
+    color: #667eea;
+    text-align: center;
+}
+#a{
+    background-color: #667eea;
+    color: white;
+    padding: 10%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#h{
+    background-color: #667eea;
+    color: white;
+    padding: 10%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+#c{
+    background-color: #667eea;
+    color: white;
+    padding: 10%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+#e{
+    background-color: #667eea;
+    color: white;
+    padding: 10%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#fname, #lname {
+    justify-content: center;
+    width: 15%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#id {
+    width: 15%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#pw{
+    font-weight: bold;
+    width: 15%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#div1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+#sub{
+    background-color: lawngreen;
+    padding: 10px 20px;
+    border: black;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+
+}
+#select{
+    width: 15%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
