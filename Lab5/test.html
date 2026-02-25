@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambodian Address Selector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-base-200 min-h-screen flex items-center justify-center">
+
+  <div class="card w-full max-w-lg bg-base-100 shadow-xl p-6">
+    
+    <h2 class="text-2xl font-bold text-center mb-6">
+      User Profile Address
+    </h2>
+
+    <form class="space-y-4">
+
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text font-semibold">Province</span>
+        </label>
+        <select id="province" class="select select-bordered w-full">
+          <option value="">Select Province</option>
+        </select>
+      </div>
+
+
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text font-semibold">District</span>
+        </label>
+        <select id="district" class="select select-bordered w-full" disabled>
+          <option value="">Select District</option>
+        </select>
+
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text font-semibold">Commune</span>
+        </label>
+        <select id="commune" class="select select-bordered w-full" disabled>
+          <option value="">Select Commune</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text font-semibold">Village</span>
+        </label>
+        <select id="village" class="select select-bordered w-full" disabled>
+          <option value="">Select Village</option>
+        </select>
+      </div>
+
+      
+      <div class="form-control mt-4">
+        <button type="submit" class="btn btn-primary w-full">
+          Save Address
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+ 
+</body>
+</html>

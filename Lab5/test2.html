@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Provinces Data Demo</h1>
+
+    <script>
+        fetch('https://cambo-gazetteer.manethpak.dev/api/v1/provinces')
+            .then(response => response.json())
+            .then(data => console.log(data))  // prints data in browser console
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
+<ul id="provincesList"></ul>
+
+<script>
+fetch('https://cambo-gazetteer.manethpak.dev/api/v1/provinces')
+    .then(res => res.json())
+    .then(data => {
+        const list = document.getElementById('provincesList');
+        data.forEach(p => {
+            const li = document.createElement('li');
+            li.textContent = p.name; // assuming API has a "name" field
+            list.appendChild(li);
+        });
+    })
+    .catch(err => console.error(err));
+</script>
+<script>
+async function getProvinces() {
+    try {
+        const response = await fetch('https://cambo-gazetteer.manethpak.dev/api/v1/provinces');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+getProvinces();
+</script>
+</body>
+</html>
